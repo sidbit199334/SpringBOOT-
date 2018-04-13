@@ -1,0 +1,12 @@
+package com.sample.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+
+import com.sample.model.employees;
+
+public interface UserRepository extends MongoRepository<employees,String> {
+
+	public employees findOneByName(String name);
+	
+}
